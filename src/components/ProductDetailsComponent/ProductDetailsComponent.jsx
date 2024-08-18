@@ -1,7 +1,6 @@
 import { Col, Row, Image, Rate } from 'antd'
 import React, { useState } from 'react'
-import { StarFilled, PlusOutlined, MinusOutlined } from '@ant-design/icons'
-import imageProductSmall from '../../assets/images/small.jpg'
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import ButtonComponent from '../ButtonComponent/ButtonComponent'
 import * as ProductService from '../../services/ProductService'
 import { WrapperAddressProduct, WrapperInputNumber, WrapperPriceProduct, WrapperPriceTextProduct, WrapperQualityProduct, WrapperStyleColImage, WrapperStyleNameProduct, WrapperStyleTextSell } from './style'

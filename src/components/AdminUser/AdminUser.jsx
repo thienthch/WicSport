@@ -95,7 +95,6 @@ const AdminUser = () => {
         }
     )
 
-    console.log('mutationDeletedMany', mutationDeletedMany)
 
     const getAllUsers = async () => {
         const res = await UserService.getAllUser()
@@ -351,23 +350,23 @@ const AdminUser = () => {
                     autoComplete='off'
                     form={form}
                 >
-                    <Form.Item label="Tên người dùng" name="name" rules={[{ required: true, message: 'Vui lòng nhập tên sản phẩm!' }]}>
+                    <Form.Item label="Tên người dùng" name="name" rules={[{ required: true, message: 'Vui lòng nhập tên của bạn!' }]}>
                         <InputComponent name='name' value={stateUserDetails.name} onChange={handleOnChangeDetails} />
                     </Form.Item>
 
-                    <Form.Item label="Email" name="email" rules={[{ required: true, message: 'Vui lòng nhập tên danh mục sản phẩm!' }]}>
+                    <Form.Item label="Email" name="email" rules={[{ required: true, message: 'Vui lòng nhập email của bạn!' }]}>
                         <InputComponent name='email' value={stateUserDetails.email} onChange={handleOnChangeDetails} />
                     </Form.Item>
 
-                    <Form.Item label="Số điện thoại" name="phone" rules={[{ required: true, message: 'Vui lòng nhập số lượng sẵn có của sản phẩm!' }]}>
+                    <Form.Item label="Số điện thoại" name="phone" rules={[{ required: true, message: 'Vui lòng nhập số điện thoại của bạn!' }]}>
                         <InputComponent name='phone' value={stateUserDetails.phone} onChange={handleOnChangeDetails} />
                     </Form.Item>
 
-                    <Form.Item label="Địa chỉ" name="address" rules={[{ required: true, message: 'Vui lòng nhập số lượng sẵn có của sản phẩm!' }]}>
+                    <Form.Item label="Địa chỉ" name="address" rules={[{ required: true, message: 'Vui lòng nhập địa chỉ của bạn!' }]}>
                         <InputComponent name='address' value={stateUserDetails.address} onChange={handleOnChangeDetails} />
                     </Form.Item>
 
-                    <Form.Item label="Admin" name="isAdmin" rules={[{ required: true, message: 'Vui lòng nhập giá của sản phẩm!' }]}>
+                    <Form.Item label="Admin" name="isAdmin" rules={[{ required: true, message: '!' }]}>
                         <InputComponent name='isAdmin' value={stateUserDetails.isAdmin} onChange={handleOnChangeDetails} />
                     </Form.Item>
 

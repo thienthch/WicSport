@@ -1,6 +1,6 @@
 import { Checkbox, Form } from 'antd'
 import React, { useEffect, useMemo, useState } from 'react'
-import { WrapperCountOrder, WrapperInfo, WrapperItemOrder, WrapperLeft, WrapperListOrder, WrapperPriceDiscount, WrapperRight, WrapperStyleHeader, WrapperTotal } from './style';
+import { WrapperCountOrder, WrapperInfo, WrapperItemOrder, WrapperLeft, WrapperListOrder, WrapperPriceDiscount, WrapperRight, WrapperStyleHeader, WrapperStyleHeaderDilivery, WrapperTotal } from './style';
 import { DeleteOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons'
 import { WrapperInputNumber } from '../../components/ProductDetailsComponent/style';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
@@ -13,6 +13,7 @@ import * as UserService from '../../services/UserService'
 import * as message from '../../components/MessageComponent/Message'
 import { updateUser } from '../../redux/slides/userSlide';
 import { useNavigate } from 'react-router-dom';
+import StepComponent from '../../components/StepComponent/StepComponent';
 
 
 
@@ -170,6 +171,24 @@ const OrderPage = () => {
         })
     }
 
+    const itemsDelivery = [
+        {
+            title: '30.000 VND',
+            description: 'Dưới 1.000.000 VND',
+        },
+        {
+            title: 'Free ship',
+            description: 'Trên 1.000.000 VND',
+        },
+    ]
+
+    const currentStep = priceMemo === 0
+        ? 0
+        : priceMemo < 1000000
+            ? 1
+            : priceMemo > 1000000
+                ? 2 : 0;
+
     return (
         <>
             <div style={{ background: '#f5f5fa', with: '100%', height: '100vh' }}>
@@ -177,6 +196,9 @@ const OrderPage = () => {
                     <h3 style={{ fontSize: '20px', margin: '0 0 20px 0', paddingTop: '20px' }}>Giỏ hàng</h3>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <WrapperLeft>
+                            <WrapperStyleHeaderDilivery>
+                                <StepComponent items={itemsDelivery} current={currentStep} />
+                            </WrapperStyleHeaderDilivery>
                             <WrapperStyleHeader>
                                 <span style={{ display: 'inline-block', width: '390px' }}>
                                     <Checkbox onChange={handleOnchangeCheckAll} checked={listChecked?.length === order?.orderItems?.length}></Checkbox>

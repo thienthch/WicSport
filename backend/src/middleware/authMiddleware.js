@@ -33,7 +33,6 @@ const authUserMiddleWare = (req, res, next) => {
                 message: 'The authemtication'
             })
         }
-        const { payload } = user
         if (user?.isAdmin || user?.id === userId) {
             next()
         } else {

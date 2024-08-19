@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import TypeProduct from "../../components/TypeProduct/TypeProduct";
 import { WrapperButtonMore, WrapperProducts, WrapperTypeProduct } from "./Style";
 import SliderComponent from "../../components/SliderComponent/SliderComponent";
-import bannerQC1 from '../../assets/images/bannerQC1.jpg'
-import bannerQC3 from '../../assets/images/bannerQC3.jpg'
-import bannerQC4 from '../../assets/images/bannerQC4.jpg'
+import bannerQC1 from '../../assets/images/bannerreal1.jpg'
+import bannerQC3 from '../../assets/images/bannerreal2.jpg'
+import bannerQC4 from '../../assets/images/bannerreal3.jpg'
 import CardComponent from "../../components/CardComponent/CardComponent";
 import { useQuery } from "@tanstack/react-query";
 import * as ProductService from '../../services/ProductService'

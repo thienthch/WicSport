@@ -48,22 +48,10 @@ const NavbarComponent = () => {
 
     return (
         <div>
-            <WrapperLableText>Label</WrapperLableText>
+            <WrapperLableText>Bộ lọc</WrapperLableText>
             <WrapperContent>
-                {renderContent('text', ['Tu lanh', 'Tivi', 'May giat'])}
+                {renderContent('text', ['Sản phẩm mới', 'Bán chạy nhất', 'Độc quyền trên WIC', 'Nam', 'Nữ'])}
             </WrapperContent>
-            {/* <WrapperContent>
-                {renderContent('checkbox', [
-                    { value: 'a', label: 'A' },
-                    { value: 'b', label: 'B' }
-                ])}
-            </WrapperContent>
-            <WrapperContent>
-                {renderContent('star', [3, 4, 5])}
-            </WrapperContent>
-            <WrapperContent>
-                {renderContent('price', ['duoi 40.000', 'tren 50.000'])}
-            </WrapperContent> */}
         </div>
     )
 }

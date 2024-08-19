@@ -26,14 +26,14 @@ const TypeProductPage = () => {
     const onChange = () => {
     }
     return (
-        <div style={{ width: '100%', backgroundColor: '#efefef', height: 'calc(100vh- - 64px)' }}>
-            <div style={{ width: '1270px', margin: '0 auto' }}>
+        <div style={{ width: '100%', backgroundColor: '#efefef', height: '728px' }}>
+            <div style={{ flex: 1, width: '1270px', margin: '0 auto', }}>
                 <Row style={{ flexWrap: 'nowrap', paddingTop: '10px' }}>
                     <WrapperNavbar span={4}>
                         <NavbarComponent />
                     </WrapperNavbar>
                     <Col span={20} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                        <WrapperProducts >
+                        <WrapperProducts style={{ height: '580px' }}>
                             {products?.map((product) => {
                                 return (
                                     <CardComponent
@@ -52,7 +52,7 @@ const TypeProductPage = () => {
                                 )
                             })}
                         </WrapperProducts>
-                        <Pagination defaultCurrent={2} total={100} onChange={onChange} style={{ textAlign: 'center', marginTop: '10px' }} />
+                        <Pagination defaultCurrent={1} total={100} onChange={onChange} style={{ textAlign: 'center', marginTop: '10px' }} />
                     </Col>
                 </Row>
             </div>

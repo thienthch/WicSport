@@ -8,6 +8,7 @@ export const WrapperCardStyle = styled(Card)`
         width: 200px
     },
     position: relative;
+    height: 200px
 `
 
 export const WrapperImageStyle = styled.img`
@@ -21,7 +22,7 @@ width: 68px !important;
 
 export const StyleNameProduct = styled.div`
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
     color: rgb(56, 56, 61);
 `

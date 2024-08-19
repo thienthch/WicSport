@@ -23,6 +23,8 @@ const HomePage = () => {
         return res
     }
 
+    const [height, setHeight] = useState(950)
+
     const fetchAllTypeProduct = async () => {
         const res = await ProductService.getAllTypeProduct()
         if (res?.status === 'OK') {
@@ -49,7 +51,7 @@ const HomePage = () => {
                 </WrapperTypeProduct>
             </div>
             <div className="body" style={{ width: '100%', backgroundColor: '#efefef' }}>
-                <div id='container' style={{ height: '1000px', width: '1270px', margin: '0 auto' }}>
+                <div id='container' style={{ height: `${height}px`, width: '1270px', margin: '0 auto' }}>
                     <SliderComponent arrImages={[bannerQC1, bannerQC3, bannerQC4]} />
                     <WrapperProducts>
                         {products?.data?.map((product) => {
@@ -76,9 +78,12 @@ const HomePage = () => {
                             height: '38px',
                             borderRadius: '4px'
                         }}
-                            disabled={products?.total === products?.data?.length || products?.totalPage == 1}
+                            disabled={products?.total === products?.data?.length || products?.totalPage === 1}
                             textButton='Xem thêm' type='outline' styleTextButton={{ fontWeight: 500, color: products?.total === products?.data?.length && '#fff' }}
-                            onClick={() => setLimit((prev) => prev + 6)} />
+                            onClick={() => {
+                                setLimit((prev) => prev + 6)
+                                setHeight(1300)
+                            }} />
                     </div>
                 </div>
             </div>

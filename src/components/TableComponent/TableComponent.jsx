@@ -16,8 +16,6 @@ const TableComponent = (props) => {
         handleDeleteMany(rowSelectedKeys)
     }
 
-    console.log('data', dataSource)
-
     const exportExcel = () => {
         const excel = new Excel();
         excel
